@@ -27,7 +27,7 @@ x = i                                                                 O(1)
   return "No tiene raíz"                                              O(1)
 ```
 
-Vemos que el algoritmo de *fuerza bruta* tiene complejidad **O(n)**, donde n es la longitud de valores a evaluar en el intervalo. En este caso n correspondería a  2000 (enteros en el intervalo)·10000(precisión) = 20'000.000. Así, este algoritmo depende tanto de la longitud del intervalo como de la precisión que se desee manejar en la respuesta y tiene complejidad lineal.
+Vemos que el algoritmo de *fuerza bruta* tiene complejidad **O(m·n)**, donde m es la longitud del intervalo inicial (# de enteros) m = 2000, y n correspondería a 1/precision, es decir n = 1/0.0001 = 10000, y m·n = 2 x 10^7. Así, este algoritmo depende tanto de la longitud del intervalo como de la precisión que se desee manejar en la respuesta.
 Con ayuda de la librería time de python, se calculó que la ejecución de este algoritmo fue de *33.2 s* aprox.
 
 ###### Algoritmo Voraz (Bisección)
@@ -54,5 +54,5 @@ def biseccion_alg (xi, xf, er):                                       **O(log n)
       xi=xm                                                           O(1)
 ```
 
-Por otro lado, el algoritmo *voraz de bisección* resulta ser más óptimo para encontrar la raíz de una función, pues su complejidad es **O(log n)**, logarítmica. Sin embargo, la precisión deseada también puede incrementar el tiempo de ejecución.
+Por otro lado, el algoritmo *voraz de bisección* resulta ser más óptimo para encontrar la raíz de una función, pues su complejidad es **O(log m·n)**, logarítmica. Con m·n = 2 x 10^7, como se calculó anteriormente. Así, en este caso la precisión deseada también puede incrementar el tiempo de ejecución.
 Para este algoritmo se obtuvo un tiempo de ejecución de *0.006086 s* aprox.
