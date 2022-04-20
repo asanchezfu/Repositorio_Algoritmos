@@ -1,4 +1,4 @@
-### Lab 4 - Algoritmos UNAL - 
+### Lab 4 - Algoritmos UNAL
 
 Este laboratorio grupal consistió en implementar dos tipos de algoritmos: *Fuerza Bruta* y *Algoritmo Voraz de bisección*  para encontrar la raíz de la función:
 **x^5 - 59x^4 + 35x^3 - 250x^2 + x - 70**
@@ -54,5 +54,5 @@ def biseccion_alg (xi, xf, er):                                       **O(log n)
       xi=xm                                                           O(1)
 ```
 
-Por otro lado, el algoritmo voraz de bisección resulta ser más óptimo para encontrar la raíz de una función, pues su complejidad es **O(log n)**, logarítmica. Sin embargo, la precisión deseada también puede incrementar el tiempo de ejecución.
+Por otro lado, el algoritmo *voraz de bisección* resulta ser más óptimo para encontrar la raíz de una función, pues su complejidad es **O(log n)**, logarítmica. Sin embargo, la precisión deseada también puede incrementar el tiempo de ejecución.
 Para este algoritmo se obtuvo un tiempo de ejecución de *0.006086 s* aprox.
